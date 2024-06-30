@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { buttonVariants } from "@/components/ui/button";
 import { BiRightArrowAlt } from "react-icons/bi";
+import { ThemeToggle } from "@/components/layout/header/theme-toggle";
 
 export function Header() {
   return (
@@ -33,7 +34,7 @@ export function Header() {
               <span>Angebotsformular</span>{" "}
               <BiRightArrowAlt className="mt-0.5" />
             </Link>
-            {/*  <ThemeToggle></ThemeToggle> */}
+            {/* <ThemeToggle></ThemeToggle> */}
           </nav>
         </nav>
       </MaxWidthWrapper>

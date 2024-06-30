@@ -1,12 +1,11 @@
 import HeroImage from "@/components/layout/hero/hero-image";
 import MaxWidthWrapper from "@/components/max-width-waraper";
 import Image from "next/image";
+import Link from "next/link";
 import { BiCheck, BiSolidStar } from "react-icons/bi";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function Home() {
-  const resend = process.env.RESEND_API_KEY;
-  const email = process.env.EMAIL_SEND_ADDRESS;
-
   return (
     <section>
       <MaxWidthWrapper className="pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-3 lg:gap-x-0 lg:pb-52 lg:pt-24 xl:gap-x-8 xl:pt-32">
@@ -23,7 +22,7 @@ export default function Home() {
                 alt="block-holz-logo"
               />
             </div>
-            <h1 className="relative mt-16 w-fit text-balance text-5xl font-bold !leading-tight tracking-tight md:text-6xl lg:text-7xl">
+            <h1 className="relative w-fit text-balance text-5xl font-bold !leading-tight tracking-tight md:mt-16 md:text-6xl lg:text-7xl">
               Alles aus{" "}
               <span className="bg-red-600 px-2 text-white dark:text-neutral-950">
                 Holz
@@ -56,41 +55,26 @@ export default function Home() {
 
             <div className="mt-12 flex flex-col items-center gap-5 sm:flex-row sm:items-start">
               <div className="flex -space-x-4">
-                <Image
-                  className="inline-block rounded-full ring-2 ring-orange-300"
-                  src="/imgs/website/users-icons/user-1.webp"
-                  alt="user image"
-                  width={40}
-                  height={40}
-                />
-                <Image
-                  className="inline-block rounded-full ring-2 ring-orange-300"
-                  src="/imgs/website/users-icons/user-2.webp"
-                  alt="user image"
-                  width={40}
-                  height={40}
-                />
-                <Image
-                  className="inline-block rounded-full ring-2 ring-orange-300"
-                  src="/imgs/website/users-icons/user-3.webp"
-                  alt="user image"
-                  width={40}
-                  height={40}
-                />
-                <Image
-                  className="inline-block rounded-full ring-2 ring-orange-300"
-                  src="/imgs/website/users-icons/user-1.webp"
-                  alt="user image"
-                  width={40}
-                  height={40}
-                />
-                <Image
-                  className="inline-block rounded-full ring-2 ring-orange-300"
-                  src="/imgs/website/users-icons/user-2.webp"
-                  alt="user image"
-                  width={40}
-                  height={40}
-                />
+                <Avatar>
+                  <AvatarImage src="/imgs/website/users-icons/user-1.webp" />
+                  <AvatarFallback className="bg-cyan-500">F</AvatarFallback>
+                </Avatar>
+                <Avatar>
+                  <AvatarImage src="/imgs/website/users-icons/user-2.webp" />
+                  <AvatarFallback className="bg-purple-600">S</AvatarFallback>
+                </Avatar>
+                <Avatar>
+                  <AvatarImage src="/imgs/website/users-icons/user-3.webp" />
+                  <AvatarFallback className="bg-green-600">M</AvatarFallback>
+                </Avatar>
+                <Avatar>
+                  <AvatarImage src="/imgs/website/users-icons/user-4.webp" />
+                  <AvatarFallback className="bg-yellow-500">J</AvatarFallback>
+                </Avatar>
+                <Avatar>
+                  <AvatarImage src="/imgs/website/users-icons/user-5.webp" />
+                  <AvatarFallback className="bg-red-600">G</AvatarFallback>
+                </Avatar>
               </div>
 
               <div className="flex flex-col items-center justify-between sm:items-start">
@@ -114,17 +98,28 @@ export default function Home() {
         <div className="col-span-full mt-12 flex h-fit w-full justify-center px-8 sm:px-16 md:px-0 lg:col-span-1 lg:mx-0 lg:mt-20">
           <div className="relative md:max-w-xl">
             <img
-              src="/imgs/website/schnelles-online-angebotsformular.webp"
-              className="absolute -top-20 left-56 hidden w-40 select-none sm:block lg:hidden lg:w-52 xl:block"
+              src="/imgs/website/schnelles-online-angebotsformular-dark.webp"
+              className="absolute -top-20 left-56 hidden w-40 select-none lg:w-52 2xl:block 2xl:dark:hidden"
             />
             <img
-              src="/imgs/website/lines-around-phone.webp"
-              className="absolute -bottom-6 -left-6 w-20 select-none"
+              src="/imgs/website/schnelles-online-angebotsformular-white.webp"
+              className="absolute -top-20 left-56 hidden w-40 select-none lg:w-52 2xl:hidden 2xl:dark:block"
             />
-            <HeroImage
-              className="w-64"
-              imgSrc="/imgs/website/block-holz-hero-section-tarrasen.webp"
+
+            <img
+              src="/imgs/website/lines-around-phone-dark.webp"
+              className="absolute -bottom-6 -left-6 w-20 select-none dark:hidden"
             />
+            <img
+              src="/imgs/website/lines-around-phone-white.webp"
+              className="absolute -bottom-6 -left-6 hidden w-20 select-none dark:flex"
+            />
+            <Link href="/kontakt">
+              <HeroImage
+                className="w-64"
+                imgSrc="/imgs/website/phone-overlay.webp"
+              />
+            </Link>
           </div>
         </div>
       </MaxWidthWrapper>
