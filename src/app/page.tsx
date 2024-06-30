@@ -4,10 +4,13 @@ import Image from "next/image";
 import { BiCheck, BiSolidStar } from "react-icons/bi";
 
 export default function Home() {
+  const resend = process.env.RESEND_API_KEY;
+  const email = process.env.EMAIL_SEND_ADDRESS;
+
   return (
     <section>
       <MaxWidthWrapper className="pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-3 lg:gap-x-0 lg:pb-52 lg:pt-24 xl:gap-x-8 xl:pt-32">
-        <div className="col-span-2 px-6 lg:px-0 lg:pt-4">
+        <div className="col-span-2 px-4 lg:px-0 lg:pt-4">
           <div className="relative mx-auto flex flex-col items-center text-center lg:items-start lg:text-left">
             <div className="absolute -top-20 left-0 hidden w-28 lg:block">
               <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-neutral-50 via-neutral-50/50 dark:bg-gradient-to-t dark:from-neutral-950 dark:via-neutral-950/50" />

@@ -6,7 +6,7 @@ import { BiRightArrowAlt } from "react-icons/bi";
 
 export function Header() {
   return (
-    <header className="sticky inset-x-0 top-0 z-[100] border-b border-neutral-200 bg-white/85 backdrop-blur-md dark:border-neutral-800 dark:bg-neutral-950/85">
+    <header className="sticky inset-x-0 top-0 z-[100] border-b border-neutral-200 bg-white/85 px-1 backdrop-blur-md dark:border-neutral-800 dark:bg-neutral-950/85">
       <MaxWidthWrapper className="py-5">
         <nav className="flex">
           <Link href={"/"} className="group flex items-center">
@@ -22,7 +22,7 @@ export function Header() {
               block-holz
             </span>
           </Link>
-          <nav className="flex flex-1 items-center justify-end space-x-2">
+          <nav className="flex flex-1 items-center justify-end">
             <Link
               href={"/kontakt"}
               className={buttonVariants({
